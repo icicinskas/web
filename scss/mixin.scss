@@ -1,6 +1,5 @@
 @mixin top {
     text-decoration: none;
-    padding: 10px;
     font-size: 0.7em;
     color: black;
 
@@ -10,10 +9,10 @@
 
 }
 
-@mixin Buttom {
-    background: $buttom-bg-color;
+@mixin Button-color {
+    background: $button-bg-color;
     color: white;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 @mixin bg {
@@ -35,15 +34,29 @@
 
         nav {
 
-            a.left {
-                font-size: 1.2em;
+            .nav {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                a {
+                    margin: 0 auto;
+                }
+
+                a.left {
+                    font-size: 1.3em;
+                    margin: 0;
+                }
+
+                a.right {
+                    font-size: 1em;
+                    padding: 8px 14px;
+                    margin: 8px 0;
+                }
             }
 
-            a.right {
-                font-size: 1em;
-                padding: 8px 10px;
-                margin: 8px 0;
-            }
+
         }
     }
 }
@@ -64,24 +77,40 @@
 
         input {
             font-size: 1.3em;
-            width: 90%;
-            padding: 12px;
+            width: 100%;
+            padding: 12px 0;
         }
 
-        a {
-            font-size: 1.3em;
-            width: 90%;
-            padding: 12px;
-            margin: 0;
-        }
-    }
+        .sign {
+            width: 92%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
 
-    .sign {
-        width: 92%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+            .btn {
+                font-size: 1.3em;
+                width: 100%;
+                padding: 12px;
+                margin: 0;
+            }
+
+            .btn-before {
+                padding: 12px 0;
+            }
+        }
+
     }
+}
+
+@mixin button {
+    position: absolute;
+    content: "";
+    background: #007bff;
+    transition-duration: 0.3s;
+    z-index: -1;
+    width: 50%;
+    height: 100%;
+    opacity: 1;
 }
 
 @mixin main {
@@ -91,16 +120,17 @@
         .box {
             display: flex;
             flex-direction: column;
-            gap: 60px;
-            padding: 120px 0;
+            gap: 70px;
+            padding: 130px 0;
 
             i {
                 font-size: 4em;
             }
 
             h4 {
-                font-size: 1.6em;
-                padding: 20px 0 5px 0;
+                font-size: 1.7em;
+                letter-spacing: 1px;
+                padding: 15px 0 5px 0;
             }
 
             p {
@@ -110,7 +140,6 @@
                 font-size: 1.2em;
                 margin: 0 auto;
             }
-
         }
 
         .body {
@@ -130,6 +159,7 @@
                 h3 {
                     width: 80%;
                     font-size: 1.9em;
+                    letter-spacing: 1px;
                 }
 
                 p {
@@ -141,10 +171,9 @@
 
             .img {
                 width: 100%;
-                height: 470px;
+                height: 500px;
                 margin: auto;
-                background-size: cover;
-                background-position: left center;
+                @include bg;
             }
         }
 
@@ -158,9 +187,11 @@
 @mixin reviews {
     .reviews {
         width: 320px;
+        padding-bottom: 110px;
 
         h2 {
-            font-size: 1.9em;
+            font-size: 2em;
+            padding-top: 40px;
         }
 
         .people {
@@ -170,6 +201,7 @@
             .imga {
                 width: 200px;
                 height: 200px;
+                padding-top: 10px;
             }
 
             .remarks {
@@ -183,6 +215,7 @@
                 p {
                     font-size: 1em;
                     line-height: 24px;
+                    padding-bottom: 50px;
                 }
             }
         }
@@ -194,7 +227,7 @@
         width: 320px;
         margin: auto;
 
-        .buttom {
+        .bottom {
             display: flex;
             align-items: center;
 
@@ -202,6 +235,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                padding-bottom: 10px;
 
                 .last {
                     text-align: center;
