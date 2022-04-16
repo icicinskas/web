@@ -1,0 +1,129 @@
+header {
+    max-width: 100%;
+
+    nav {
+        background: $section-bg-color;
+
+        .nav {
+            max-width: 960px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                @include top;
+                margin: 10px 100px;
+
+                &:hover {
+                    color: blue;
+                }
+            }
+
+            a.left {
+                font-size: 0.8em;
+            }
+
+            a.right {
+                @include Button-color;
+                border: 1px solid $button-bg-color;
+                padding: 4px 10px;
+                transition: 0.3s;
+
+                &:hover {
+                    background: transparent;
+                    color: blue;
+                }
+            }
+        }
+
+
+    }
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: $header-bg-color;
+    background-size: cover;
+    background-position: center;
+    padding: 80px;
+
+    h1 {
+        color: white;
+        font-size: 1.9em;
+        line-height: 42px;
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+
+    h2 {
+        color: white;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        padding-bottom: 20px;
+    }
+
+    .sign {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .btn {
+            position: relative;
+            box-sizing: border-box;
+            display: inline-block;
+            overflow: hidden;
+            font-size: 0.7em;
+            padding: 8px 30px;
+            text-align: center;
+            border: 2px solid $button-bg-color;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            white-space: nowrap;
+            z-index: 0;
+        }
+
+        .btn-before::before {
+            @include button;
+            inset: 0px 0px auto auto;
+        }
+
+        .btn-before:hover::before {
+            width: 0px;
+            height: 100%;
+            opacity: 1;
+        }
+
+        .btn-before {
+            background: $button-bg-color;
+            transition: all 0.3s ease 0s;
+        }
+
+        .btn-before:hover {
+            background: transparent;
+            transition: all 0.3s ease 0s;
+        }
+
+        .btn-before::after {
+            @include button;
+            inset: 0px auto auto 0px;
+        }
+
+        .btn-before:hover::after {
+            width: 0px;
+        }
+    }
+
+    input {
+        width: 300px;
+        background: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}

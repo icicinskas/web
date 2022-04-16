@@ -1,0 +1,264 @@
+@mixin top {
+    text-decoration: none;
+    font-size: 0.7em;
+    color: black;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+@mixin Button-color {
+    background: $button-bg-color;
+    color: white;
+    border-radius: 4px;
+}
+
+@mixin bg {
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+@mixin header {
+    header {
+        width: 320px;
+        margin: auto;
+
+        nav {
+
+            .nav {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                a {
+                    margin: 0 auto;
+                }
+
+                a.left {
+                    font-size: 1.3em;
+                    margin: 0;
+                }
+
+                a.right {
+                    font-size: 1em;
+                    padding: 8px 14px;
+                    margin: 8px 0;
+                }
+            }
+
+
+        }
+    }
+}
+
+@mixin head {
+    .head {
+        padding: 120px 0;
+
+        h1 {
+            letter-spacing: 1px;
+            width: 90%;
+        }
+
+        h2 {
+            font-size: 1.9em;
+            width: 90%;
+        }
+
+        input {
+            font-size: 1.3em;
+            width: 100%;
+            padding: 12px 0;
+        }
+
+        .sign {
+            width: 92%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .btn {
+                font-size: 1.3em;
+                width: 100%;
+                padding: 12px;
+                margin: 0;
+            }
+
+            .btn-before {
+                padding: 12px 0;
+            }
+        }
+
+    }
+}
+
+@mixin button {
+    position: absolute;
+    content: "";
+    background: #007bff;
+    transition-duration: 0.3s;
+    z-index: -1;
+    width: 50%;
+    height: 100%;
+    opacity: 1;
+}
+
+@mixin main {
+    main {
+        width: 320px;
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+            padding: 130px 0;
+
+            i {
+                font-size: 4em;
+            }
+
+            h4 {
+                font-size: 1.7em;
+                letter-spacing: 1px;
+                padding: 15px 0 5px 0;
+            }
+
+            p {
+                color: grey;
+                width: 90%;
+                line-height: 30px;
+                font-size: 1.2em;
+                margin: 0 auto;
+            }
+        }
+
+        .body {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 50px;
+            margin: 0;
+
+            article {
+                width: 100%;
+
+                .text {
+                    width: 70%;
+                    padding-bottom: 60px;
+                }
+
+                h3 {
+                    width: 80%;
+                    font-size: 1.9em;
+                    letter-spacing: 1px;
+                }
+
+                p {
+                    color: grey;
+                    font-size: 1.2em;
+                    line-height: 30px;
+                }
+            }
+
+            .img {
+                width: 100%;
+                height: 500px;
+                margin: auto;
+                @include bg;
+            }
+        }
+
+        .body:nth-of-type(2) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+@mixin reviews {
+    .reviews {
+        width: 320px;
+        padding-bottom: 110px;
+
+        h2 {
+            font-size: 2em;
+            padding-top: 40px;
+        }
+
+        .people {
+            display: flex;
+            flex-direction: column;
+
+            .imga {
+                width: 200px;
+                height: 200px;
+                padding-top: 10px;
+            }
+
+            .remarks {
+                width: 98%;
+                margin: auto;
+
+                h5 {
+                    font-size: 1.3em;
+                }
+
+                p {
+                    font-size: 1em;
+                    line-height: 24px;
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+@mixin footer {
+    footer {
+        width: 320px;
+        margin: auto;
+
+        .bottom {
+            display: flex;
+            align-items: center;
+
+            .footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 10px;
+
+                .last {
+                    text-align: center;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    margin: auto;
+                }
+
+                .rights {
+                    font-size: 0.8em;
+                    padding-top: 15px;
+                }
+
+                .about a {
+                    font-size: 1em;
+                }
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+}
