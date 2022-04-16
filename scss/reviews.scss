@@ -9,20 +9,8 @@
     h2 {
         margin-bottom: 30px;
     }
-
-    .people {
-        display: flex;
-        margin: auto;
-        justify-content: center;
-
-        .person {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .imga-1 {
+    
+    .imga-1 {
             @include img;
             background: $img-1-rvw;
             background-size: cover;
@@ -42,6 +30,20 @@
             background-size: cover;
             background-position: center;
         }
+
+    .people {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+
+        .person {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    
 
         .remarks {
             width: 220px;
