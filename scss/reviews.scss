@@ -22,21 +22,21 @@
             align-items: center;
         }
 
-        .img-1 {
+        .imga-1 {
             @include img;
             background: $img-1-rvw;
             background-size: cover;
             background-position: center;
         }
 
-        .img-2 {
+        .imga-2 {
             @include img;
             background: $img-2-rvw;
             background-size: cover;
             background-position: center;
         }
 
-        .img-3 {
+        .imga-3 {
             @include img;
             background: $img-3-rvw;
             background-size: cover;
