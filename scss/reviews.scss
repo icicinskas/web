@@ -14,19 +14,40 @@
         display: flex;
         margin: auto;
         justify-content: center;
+        
+        .person {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img-1 {
+            @include img;
+            background: $img-1-rvw;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-2 {
+            @include img;
+            background: $img-2-rvw;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-3 {
+            @include img;
+            background: $img-3-rvw;
+            background-size: cover;
+            background-position: center;
+        }
 
         .remarks {
             width: 220px;
             margin-left: 10px;
             margin-right: 10px;
         }
-    }
-
-    img {
-        width: 120px;
-        height: 120px;
-        border-radius: 100%;
-        margin: 10px;
     }
 
     p {
