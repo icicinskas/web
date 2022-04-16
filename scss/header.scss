@@ -1,0 +1,86 @@
+header {
+    max-width: 100%;
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: $section-bg-color;
+
+        a {
+            @include top;
+
+            &:hover {
+                color: blue;
+            }
+        }
+
+        a.left {
+            font-size: 0.8em;
+        }
+
+        a.right {
+            @include Buttom;
+            border: 1px solid $buttom-bg-color;
+            padding: 4px 10px;
+            transition: 0.3s;
+
+            &:hover {
+                background: transparent;
+                color: blue;
+            }
+        }
+    }
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: $header-bg-color;
+    background-size: cover;
+    background-position: center;
+    padding: 80px;
+
+    h1 {
+        color: white;
+        font-size: 1.7em;
+        padding-bottom: 30px;
+    }
+
+    h2 {
+        color: white;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        padding-bottom: 20px;
+    }
+
+    .sign {
+        display: flex;
+        align-items: center;
+    }
+
+    input {
+        width: 300px;
+        background: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.7em;
+        padding: 8px;
+    }
+
+    a {
+        border: 1px solid $buttom-bg-color;
+        text-decoration: none;
+        font-size: 0.7em;
+        @include Buttom;
+        padding: 8px 30px;
+        margin-left: 5px;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
